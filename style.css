@@ -20,8 +20,8 @@ input::placeholder {
 body {
     display: flex;
     flex-direction: column;
-background-image: radial-gradient(#e5e7eb 2px, transparent 2px);
-background-size: 16px 16px;
+    background-image: radial-gradient(#e5e7eb 2px, transparent 2px);
+    background-size: 16px 16px;
 }
 
 /* section {
@@ -247,15 +247,21 @@ button {padding: 8px 24px; border: none; border-radius: 8px; font-size: 16px; cu
     border-radius: 8px;
 }
 
+.grade-equivalent {
+    padding: 48px calc(50% - 600px);
+}
+
 .table-grade-equivalent {
     width: 100%;
     border-collapse: collapse;
 }
 
 .table-grade-equivalent th, .table-grade-equivalent td {
-    padding: 14px 24px;
+    padding: 12px 24px;
     color: #333;
     font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
 }
 
 .table-grade-equivalent .point {
@@ -266,7 +272,9 @@ button {padding: 8px 24px; border: none; border-radius: 8px; font-size: 16px; cu
 .table-grade-equivalent th {
     text-align: left;
     padding: 16px 24px;
+    font-weight: 700;
     color: white;
+    background-color: #5EB761;
 }
 
 .table-grade-equivalent tr:first-child {
@@ -277,9 +285,9 @@ button {padding: 8px 24px; border: none; border-radius: 8px; font-size: 16px; cu
     border-top: 1px #e0e0e0 solid;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1240px) {
     main, hero {
-        padding: 0 calc(40% - 220px);
+        padding: 0 calc(50% - 400px);
     }
 
     main {
@@ -300,6 +308,10 @@ button {padding: 8px 24px; border: none; border-radius: 8px; font-size: 16px; cu
 
     .info, .input-data {
         padding: 24px;
+    }
+
+    .grade-equivalent {
+        padding: 36px calc(50% - 400px);
     }
 
     .table-input tr input {
@@ -330,5 +342,15 @@ button {padding: 8px 24px; border: none; border-radius: 8px; font-size: 16px; cu
 
     button {
         padding: 8px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    main, hero {
+        padding: 0 calc(50% - 220px);
+    }
+
+    .grade-equivalent {
+        padding: 32px calc(50% - 220px);
     }
 }

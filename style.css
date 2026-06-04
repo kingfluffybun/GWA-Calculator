@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder {
+  color: #a3a3a3;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+background-image: radial-gradient(#e5e7eb 2px, transparent 2px);
+background-size: 16px 16px;
+}
+
+/* section {
+    height: 100vh;
+} */
+
+hero {
+    position: relative;
+    display: flex;
+    background-color: #5EB761;
+    width: 100%;
+    height: 48vh;
+    padding: 0 calc(50% - 600px);
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 240px;
+    padding: 0 36px;
+    h1 {font-size: 56px;}
+    p {font-size: 20px;}
+}
+
+main {
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    width: 100%;
+    padding: 0 calc(50% - 600px);
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+}
+
+.input-data, .info {
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08), 0px 12px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    border-bottom: #5EB761 6px solid;
+}
+
+.input-data {z-index: 100; margin-bottom: 48px; min-height: 480px; padding: 36px; flex-shrink: 0;}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin: 28px 0 0 -12px;
+    height: fit-content;
+    padding: 36px;
+    padding-left: 48px;
+    gap: 12px;
+}
+
+.upload-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-height: 480px;
+    background-color: #F5F9FC;
+    border-radius: 12px;
+    border: #e0e0e0 2px dashed;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+}
+
+.upload-photo:hover {
+    border-color: #5EB761;
+    background-color: #e7f4e8;
+}
+
+.table-input {
+    width: 100%;
+    border-spacing: 6px;
+}
+
+.table-input tr th, .header {
+    color: #333;
+    font-size: 16px;
+}
+
+.table-input tr th {
+    text-align: left;
+    width: 25%;
+}
+
+.table-input tr th:first-child {
+    width: 50%;
+}
+
+.table-input tr input {
+    width: 100%;
+    padding: 10px 16px;
+    border: #e0e0e0 2px solid;
+    border-radius: 8px;
+    font-size: 16px;
+    /* font-weight: 300; */
+}
+
+.table-input td:last-child {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.table-input td button {
+    transition: background 200ms ease, border-color 200ms ease;
+    height: 44px;
+    border: 2px solid #e0e0e0;
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;        
+    width: 100%;
+    svg {color: #333;}
+}
+
+.table-input td button:hover {
+    background-color: #E95156;
+    border: 2px #E95156 solid;
+    border-bottom: #af3d40 4px solid;
+    svg {color: white;}
+}
+
+.action {
+    padding: 0 6px;
+}
+
+button {padding: 8px 24px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;}
+
+#add-subject {background-color: transparent; border: #5EB761 2px solid; border-bottom: 4px #5EB761 solid; color: #5EB761; transition: background ease 200ms}
+.main-btn {background-color: #5EB761; border: #5EB761 2px solid; border-bottom: 4px #468949 solid; color: white; position: relative;}
+
+.action #add-subject:hover {
+    background-color: #5EB761; border-bottom-color:#468949; color: white;
+}
+
+.main-btn::after {
+    content: "";
+    position: absolute;
+    transition: all ease 200ms;
+    background-color: rgba(255, 255, 255, 0);
+    height: 100%; width: 100%;
+}
+
+.main-btn:hover::after {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-btn:active, #add-subject:active {
+    border-bottom: 2px #468949 solid;
+}
+
+#add-subject:active {
+    background-color: #5EB761; color: white
+}
+
+
+.table-input td button:active {
+    background-color: #E95156;
+    border: 2px #E95156 solid;
+    border-bottom: #af3d40 2px solid;
+    svg {color: white;}
+}
+
+.gwa-result {
+    padding: 0 6px;
+}
+
+.gwa-content {
+    background-color: #5EB761;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 8px;
+}
+
+.ocr-result {
+    display: none;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.info-modal {
+    color: #1E46FF;
+    background-color: #F4F7FF;
+}
+
+.error-modal {
+    color: #E02C02;
+    background-color: #FDE9E7;
+}
+
+.success-modal {
+    color: #46A22A;
+    background-color: #EDF6EA;
+}
+
+.pill {
+    background-color: #5EB761;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.table-grade-equivalent {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-grade-equivalent th, .table-grade-equivalent td {
+    padding: 14px 24px;
+    color: #333;
+    font-size: 14px;
+}
+
+.table-grade-equivalent .point {
+    color: #5EB761;
+    font-weight: 700;
+}
+
+.table-grade-equivalent th {
+    text-align: left;
+    padding: 16px 24px;
+    color: white;
+}
+
+.table-grade-equivalent tr:first-child {
+    background-color: #5EB761;
+}
+
+.group-start {
+    border-top: 1px #e0e0e0 solid;
+}
+
+@media (max-width: 1000px) {
+    main, hero {
+        padding: 0 calc(40% - 220px);
+    }
+
+    main {
+        top: 240px;
+    }
+
+    .hero-title {
+        text-align: center;
+        padding: 0 24px;
+        svg {display: none;}
+    }
+
+    .calculator {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .info, .input-data {
+        padding: 24px;
+    }
+
+    .table-input tr input {
+        padding: 10px 12px;
+    }
+
+    .table-input tr th:first-child {
+        width: 45%;
+    }
+
+    .table-input tr th:nth-child(2) {
+        width: 20%;
+    }
+
+    .table-input tr th[colspan="2"] {
+        width: 35%;
+    }
+
+    .info {
+        order: 1;
+        margin: 0;
+        padding-left: 24px;
+    }
+
+    .input-data {
+        order: 2;
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+}

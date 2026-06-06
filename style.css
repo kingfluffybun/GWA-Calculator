@@ -76,7 +76,7 @@ main {
 .info {
     display: flex;
     flex-direction: column;
-    margin: 28px 0 0 -12px;
+    margin: 16px 0 0 -12px;
     height: fit-content;
     padding: 36px;
     padding-left: 48px;
@@ -209,7 +209,6 @@ button {padding: 8px 24px; border: none; border-radius: 8px; font-size: 16px; cu
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 4px;
     border-radius: 8px;
 }
 
